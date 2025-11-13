@@ -84,4 +84,6 @@ Highly available application infrastructure
 
 ## Create VPC ##
 
+![image_alt](https://github.com/JBAssan78/VPC-AWS/blob/48ba46fdd8c780a837f6cda0fa84941cc93afdb8/Screenshot%202025-11-11%20184708.png)
+
 
