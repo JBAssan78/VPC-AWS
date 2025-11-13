@@ -16,3 +16,68 @@ You can carve out many smaller subnets — in your case, /24 networks (each with
 | us-east-2b | 10.10.2.0/24  | 10.10.12.0/24  |
 | us-east-2c | 10.10.3.0/24  | 10.10.13.0/24  |
 
+# Subnet Breakdown #
+
+You divided the VPC into /24 subnets, which is typical for separating public and private resources.
+
+Each /24 subnet provides 256 IP addresses (251 usable).
+
+A clean structure would look like this:
+
+Public Subnets (Example)
+
+10.10.1.0/24
+
+10.10.2.0/24
+
+10.10.3.0/24
+These are typically used for:
+
+Load balancers
+
+Bastion hosts
+
+NAT Gateway
+
+Any resource needing direct Internet access
+
+Private Subnets (Example)
+
+10.10.11.0/24
+
+10.10.12.0/24
+
+10.10.13.0/24
+These are used for:
+
+EC2 application servers
+
+Databases (RDS)
+
+Internal services
+These subnets do not have direct Internet access — they rely on a NAT Gateway in a public subnet for outbound traffic.
+
+## Availability Zones (AZ) – us-east-2 ##
+
+The region US-East-2 has three AZs:
+
+us-east-2a
+
+us-east-2b
+
+us-east-2c
+
+A typical high-availability layout would be:
+
+AZ	Public Subnet	Private Subnet
+us-east-2a	10.10.1.0/24	10.10.11.0/24
+us-east-2b	10.10.2.0/24	10.10.12.0/24
+us-east-2c	10.10.3.0/24	10.10.13.0/24
+
+This creates redundant networking across all 3 AZs and supports:
+
+Multi-AZ load balancing
+
+Multi-AZ database deployments
+
+Highly available application infrastructure
