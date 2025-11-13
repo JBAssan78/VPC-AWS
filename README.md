@@ -81,3 +81,7 @@ Multi-AZ load balancing
 Multi-AZ database deployments
 
 Highly available application infrastructure
+
+## Create VPC ##
+
+
