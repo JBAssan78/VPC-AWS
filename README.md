@@ -87,3 +87,4 @@ Highly available application infrastructure
 ![image_alt](https://github.com/JBAssan78/VPC-AWS/blob/48ba46fdd8c780a837f6cda0fa84941cc93afdb8/Screenshot%202025-11-11%20184708.png)
 
 
+Your starting point will be at the AWS console, navigate to the VPC in the search bar and the screen above will show.
