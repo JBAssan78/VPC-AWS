@@ -88,3 +88,7 @@ Highly available application infrastructure
 
 
 Your starting point will be at the AWS console, navigate to the VPC in the search bar and the screen above will show.
+
+Click "create vpc" , create your projects name, configure the CIDR which will be (10.10.0.0/16) 
+
+![image_alt](https://github.com/JBAssan78/VPC-AWS/blob/9df087a2f7d27044d0b0fed78d43ba061e2faa0b/Screenshot%202025-11-11%20185155.png)
